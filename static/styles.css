@@ -1,0 +1,70 @@
+* {margin: 0;}
+body {font-family: Arial, sans-serif;}
+h3 {text-align: center;}
+p {
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90vw;
+}
+.extras {text-align: center;}
+img {
+ margin-left: auto;
+ margin-right: auto;
+ width: auto;
+ max-width: 90vw;
+ height: auto;
+ max-height: 90vh;
+}
+.logo {
+  width: 30px;
+  height: 30px;
+}
+.iframe-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+input, textarea {min-width: 250px;}
+.table {
+  max-width: 628px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* From twilio intl-tel-input example */
+#phone, .btn {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+/* Polaroid from w3schools.com */
+.polaroid {
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: auto;
+}
+.polaroid img {width: 100%;}
+.polaroid .polaroid-label {
+  text-align: center;
+  padding: 10px 20px;
+}
+/* Fullscreen 360° tour on smaller (mobile) screens in landscape only*/
+@media screen and (orientation:landscape) and (max-width:1024px){
+#tour {position: fixed;}
+}

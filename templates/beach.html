@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Beach
+{% endblock %}
+
+{% block main %}
+
+<h3>Beaches</h3>
+
+<div class="polaroid">
+    <img src="{{ url_for('static', filename='images/act/chiringuito-beachbar.png') }}" alt="Chiringuito beach bar"/>
+  <div class="polaroid-label">
+    <p>Beachgoers are in luck, not only are you almost guaranteed sunshine but Orihuela Costa has no less than 15km of cosatline including 11 white-sand beaches most of which have their own <a href="https://chiringuitosdelsol.com/en/portfolio-item/cala-bosque/" target="_blank">chiringuito</a>; a Spanish beach bar.</p>
+  </div>
+</div>
+
+<div class="polaroid">
+    <img src="{{ url_for('static', filename='images/act/beach-view-mirada.jpg') }}" alt="Beach and sea views from La Mirada restaurant terrace"/>
+  <div class="polaroid-label">
+    <p>The nearest and biggest beach is La Zenia (Cala Bosque) which is over 250m long and 60m wide. In addition to the chiringuito is La Mirada restaurant with large outdoor terraces overlooking the beach and sea.</p>
+  </div>
+</div>
+
+{% endblock %}

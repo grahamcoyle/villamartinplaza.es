@@ -1,0 +1,130 @@
+ {% extends "layout.html" %}
+
+{% block head %}
+
+<!-- Include date range picker prerequisites -->
+<script src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+
+<!-- Include Twilio phone number validator prerequisites -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css">
+
+{% endblock %}
+
+{% block title %}
+    Book
+{% endblock %}
+
+{% block main %}
+<div class="container">
+    <table class="table table-light table-bordered">
+        <thead>
+            <tr>
+                <th>Per night</th>
+                <th>€</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Summer holidays</td>
+                <td>140</td>
+            </tr>
+            <tr>
+                <td>All other holidays</td>
+                <td>110</td>
+            </tr>
+            <tr>
+                <td>April - October (not holidays)</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>November - March (not holidays)</td>
+                <td>80</td>
+            </tr>
+        </tbody>
+        <thead>
+            <tr>
+                <th>Per stay</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cleaning</td>
+                <td>70</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Make a booking enquiry for your chosen dates to receive a full quote by email with no committment.<br>
+        Loyalty discount 10% off nightly rates for returning guests.<br>
+        If you would like a telephone call to discuss please include your number:
+    </p>
+</div>
+<form action="/book" method="post" id="book">
+    <div class="mb-3">
+        <input class="form-control mx-auto w-auto" id="subject" name="subject" type="hidden">
+    </div>
+    <div class="mb-3">
+        <input autocomplete="on" autofocus class="form-control mx-auto w-auto" id="name" name="name" placeholder="name*" type="text" required>
+    </div>
+    <div class="mb-3">
+        <input autocomplete="on" class="form-control mx-auto w-auto" id="email" name="email" placeholder="email address*" type="email" required>
+    </div>
+    <!-- Twilio phone number verification -->
+    <div class="mb-3">
+        <input autocomplete="on" class="form-control mx-auto w-auto" id="phone" name="phone" placeholder="phone number" type="tel">
+        <input type="hidden" id="verified" name="verified" value="initial">
+    </div>
+    <!-- Daterangepicker -->
+    <div class="mb-3">
+        <input type="text" name="daterange" class="daterange form-control mx-auto w-auto" required>
+        <input type="hidden" id="arrival" name="arrival" value="">
+        <input type="hidden" id="departure" name="departure" value="">
+    </div>
+    <button class="btn btn-primary" type="submit" value="submit">Submit Booking Enquiry
+    </button>
+</form>
+<br>
+<H3>Current Availability:</H3>
+<div class="mx-auto" style="max-width:628px;">
+    <iframe src="https://www.availcalendar.com/print/18325"
+        width="100%"
+        height="470"
+        frameborder="0"
+        scrolling="no">
+    </iframe>
+</div>
+
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+<script>
+
+// Daterangepicker function
+$(function() {
+  $('input[name="daterange"]').daterangepicker({
+      startDate: "{{ today }}",
+      endDate: "{{ endDate }}",
+      minDate: "{{ today }}",
+      maxDate: "{{ anniversary }}",
+      dateLimit: {months:1},
+      locale: {format: "D MMM Y", separator: " to "}
+  },
+  // Daterangepicker callback function to get required data (start and end dates)
+  function(start, end) {
+    document.querySelector("#arrival").value = start.format("D MMM Y");
+    document.querySelector("#departure").value = end.format("D MMM Y");
+    console.log(start.format("D MMM Y"));
+    console.log(end.format("D MMM Y"));
+  });
+  // Jquery placeholder until dates selected
+  $('input[name="daterange"]').val("");
+  $('input[name="daterange"]').attr("placeholder", "select dates*");
+});
+// On form submission trigger verify function
+document.querySelector("#book").addEventListener("submit", verify);
+
+</script>
+
+{% endblock %}

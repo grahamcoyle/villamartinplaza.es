@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+
+<div class="container">
+    <h1>Stunning 2 bedroom apartment in Villamartín Plaza.</h1>
+    <h3 style="color: red">{{ temp }}
+    <span style="color: black">&#176;C today</span>
+    </h3>
+    <div class="polaroid">
+        <img src="{{ url_for('static', filename='images/plaza.jpg') }}" alt="Internal view of Villamartin Plaza from the balcony">
+      <div class="polaroid-label">
+        <p>  The Plaza is delightfully decorated in the traditional Spanish style with blue and white tiles, palms, and a central fountain. Originally built as an aparthotel very few properties here have 2 bedrooms and less than half have the desireable views of the internal plaza with even fewer having South-facing balconies to soak up the sun all day. This one has it all so don't miss out!</p>
+      </div>
+    </div>
+    <div class="polaroid">
+        <img src="{{ url_for('static', filename='images/plaza-external.jpg') }}" alt="External view of Villamartin Plaza from the road">
+      <div class="polaroid-label">
+        <p>The plaza was built in the ealy 1970s before Villamartín became well developed and so enjoys prime position alongside the golf course.  The top 2 floors remain as residential apartments with the lower 2 floors now bars, restaurants and boutiques making the ideal destination.</p>
+      </div>
+    </div>
+    <div class="polaroid">
+        <img src="{{ url_for('static', filename='images/plaza-night.jpg') }}" alt="Internal view of Villamartin Plaza at night">
+      <div class="polaroid-label">
+        <p>Beautifully lit, it is a wonderful place to be at night, the perfect venue for wining and dining on those warm Spanish evenings! To top it all off, this apartment has been fully renovated internally in contemporary style, check out the <a href="/photos">photos</a>.</p>
+      </div>
+    </div>
+    <div class="iframe-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d803172.1704919944!2d-0.8785000000000005!3d38.154344800000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd630996ce3f2769%3A0xea6dc034e9081ff8!2sVillamartin%20Plaza%20-%20Stunning%202-Bed%20Apartment!5e0!3m2!1sen!2ses!4v1669804362591!5m2!1sen!2ses"
+            title="location map"
+            class="responsive-iframe"
+            loading="eager"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</div>
+
+{% endblock %}

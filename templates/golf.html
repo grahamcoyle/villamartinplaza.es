@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Golf
+{% endblock %}
+
+{% block main %}
+
+<h3>Golf</h3>
+
+<div class="polaroid">
+    <img src="{{ url_for('static', filename='images/act/golf-villamartin.jpg') }}" alt="View of rollilng greens and bunkers at sunrise"/>
+  <div class="polaroid-label">
+    <p>Golfers are spoilt for choice in these parts, with 17 courses on the Orihuela Costa including this one right next door:
+        <a href="https://www.lafincaresort.com/en/golf/villamartin-golf-course" target="_blank">Campo de Golf Villamartín.</a>
+    </p>
+  </div>
+</div>
+
+<div class="polaroid">
+    <img src="{{ url_for('static', filename='images/act/clubhouse-terrace-outdoor-bar.png') }}" alt="Clubhouse (19th hole)"/>
+  <div class="polaroid-label">
+    <p>The clubhouse benefits from a delightful sun-drenched outdoor terrace with its own bar serving drinks and meals.</p>
+  </div>
+</div>
+<div class="polaroid">
+    <img src="{{ url_for('static', filename='images/act/18th-wide.jpg') }}" alt="Outdoor terrace overlooking 18th green"/>
+  <div class="polaroid-label">
+    <p>Whether you play or not, go and enjoy the 19th hole while watching others play in.</p>
+  </div>
+</div>
+
+{% endblock %}

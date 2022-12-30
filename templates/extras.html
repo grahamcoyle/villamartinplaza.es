@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Extras
+{% endblock %}
+
+{% block main %}
+        <form>
+            <select name="extra" onchange="extras(this.value);">
+                <option value="">Optional extras:</option>
+                <option value="transfers">Airport Transfers</option>
+                <option value="beer">Chilled Beer</option>
+                <option value="romance">Romantic Collection</option>
+            </select>
+        </form>
+
+        <div id="extrasdiv">
+            <p class="extras"><br>We want you to have a great stay so if there is anything else in particular that you would like, please ask.</p>
+        </div>
+
+        <script src="{{ url_for('static', filename='main.js') }}" type="text/javascript"></script>
+{% endblock %}

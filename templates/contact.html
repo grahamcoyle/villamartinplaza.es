@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Contact
+{% endblock %}
+
+{% block main %}
+
+<form action="/contact" method="post">
+    <div class="mb-3">
+        <input class="form-control mx-auto w-auto" id="subject" name="subject" type="hidden">
+    </div>
+    <div class="mb-3">
+        <input autocomplete="on" autofocus class="form-control mx-auto w-auto" id="name" name="name" placeholder="name*" type="text" maxlength="100" required>
+    </div>
+    <div class="mb-3">
+        <input autocomplete="on" class="form-control mx-auto w-auto" id="email" name="email" placeholder="email address*" type="email" required>
+    </div>
+    <div class="mb-3">
+        <textarea class="form-control mx-auto w-auto" id="message" rows="5" name="message" placeholder="message*" maxlength="250" required></textarea>
+    </div>
+    <button class="btn btn-primary" type="submit">Send Message
+    </button>
+</form>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Shopping
+{% endblock %}
+
+{% block main %}
+
+<h3>Shopping</h3>
+
+<div class="polaroid">
+    <img src="{{ url_for('static', filename='images/act/boulevard-hello.png') }}" alt="Hello from Zenia Boulevard!"/>
+  <div class="polaroid-label">
+    <p>Nearby <a href="https://zeniaboulevard.es/en" target="_blank">Zenia boulevard</a>, one of the largest outdoor shopping centers in Spain, is loaded with shops to suit all tastes as well as entertainment including bowling alley, arcade, kids play zone, live acts on stage and a big screen that shows the big games.</p>
+  </div>
+</div>
+
+<div class="polaroid">
+    <img src="{{ url_for('static', filename='images/act/boulevard-night.png') }}" alt="Zenia Boulevard by night"/>
+  <div class="polaroid-label">
+    <p>On top of all that, literally, is a top floor dedicated to eateries of all types, enough to keep anybody well fed and well worth staying on for a meal after a hard day's shopping!</p>
+  </div>
+</div>
+
+{% endblock %}

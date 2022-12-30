@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Photos
+{% endblock %}
+
+{% block main %}
+
+    <!-- Carousel -->
+<div id="carousel" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- The slides -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{{ url_for('static', filename='images/apt/pool-golf.jpg') }}" alt="Communal Pool with golf course behind">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/lounge-balcony.jpg') }}" alt="Lounge, folding doors to balcony">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/lounge-diner-balcony.jpg') }}" alt="Lounge, diner and balcony">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/lounge-kitchen.jpg') }}" alt="Open-plan kitchen lounge">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/kitchen.jpg') }}" alt="Modern kitchen design">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/kitchen-frontdoor.jpg') }}" alt="Spacious kitchen">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/lion.jpg') }}" alt="Contemporary artwork against stunning slate tiled walls">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/cupboard-closed.jpg') }}" alt="Ample storage">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/hall-frontdoor.jpg') }}" alt="Neat entrance">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/detail-onair.jpg') }}" alt="Bathroom engaged!">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/bathroom-shower.jpg') }}" alt="Stunning bathroom">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/bathroom-window.jpg') }}" alt="Light and airy bathroom">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/hall-balcony.jpg') }}" alt="Spacious open-plan apartment">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/balcony.jpg') }}" alt="Outdoor table and chairs">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/balcony-right.jpg') }}" alt="Balcony view right">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/balcony-left.jpg') }}" alt="Balcony view left">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/diner-tv.jpg') }}" alt="Dining table and 55-inch TV">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/bed1-window.jpg') }}" alt="Main bedroom">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/bed1-door.jpg') }}" alt="Main bedroom">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/bed2-window.jpg') }}" alt="Twin bedroom">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/bed2-aircon.jpg') }}" alt="Twin Bedroom">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/detail-dw-wm.jpg') }}" alt="Dishwasher and washing machine">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/detail-hob.jpg') }}" alt="Induction hob">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/detail-table.jpg') }}" alt="Dining table">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/detail-extractor.jpg') }}" alt="Kitchen extractor">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/detail-handles.jpg') }}" alt="Modern touches">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/detail-tap.jpg') }}" alt="Fine detail">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/detail-lamp.jpg') }}" alt="Classy and comfortable">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/apt/detail-cutlery.jpg') }}" alt="Everything you need">
+      </div>
+    </div>
+
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="carousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="carousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+{% endblock %}

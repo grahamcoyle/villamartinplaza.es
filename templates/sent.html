@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Message Sent
+{% endblock %}
+
+{% block main %}
+<h3> Message Sent</h3>
+
+<img src="{{ url_for('static', filename='images/sent.png') }}" alt="Letter been posted"/>
+
+{% endblock %}

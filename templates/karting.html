@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Karting
+{% endblock %}
+
+{% block main %}
+
+<h3>Karting</h3>
+
+<div class="polaroid">
+  <img src="{{ url_for('static', filename='images/act/go-karts.jpg') }}" alt="Go-Karts Orihuela Costa">
+  <div class="polaroid-label">
+    <p>Karting is always good fun and there are both adult and junior tracks in nearby Playa Flamenca at
+        <a href="https://gokartsorihuelacosta.com/?lang=en" target="_blank">Go-Karts Orihuela Costa</a>.
+    </p>
+  </div>
+</div>
+
+{% endblock %}
